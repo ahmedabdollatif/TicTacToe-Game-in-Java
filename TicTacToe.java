@@ -37,22 +37,20 @@ public class TicTacToe {
             arr[x][y] = pl; // change '.' to either 'x' or 'o'
 
             // check if the player wins
-            int win1 = 0; // ups and downs
-            int win2 = 0; // rights and lefts
-            int win3 = 0; // top rights&lefts & down rights&lefts
+            int win1 = 0; // vertically
+            int win2 = 0; // horizontally
+            int win3 = 0; // diagonally
 
             for (int i = 1-n; i < n; i++) {
-                // check that it does not exceed the max left or the max right
+                // check that it does not exceed borders
                 if(x+i >=0 && x+i < n)
-                    // if the ones next to is the same
                     if(arr[x+i][y] == pl) win1++;
 
-                // check that it does not exceed the max top or the max bottom
+                // check that it does not exceed borders
                 if(y+i >=0 && y+i < n)
-                    // if the ones up/down to is the same
                     if(arr[x][y+i] == pl) win2++;
 
-                // check the top right/left or bottom right/left
+                // check that it does not exceed borders
                 if(y+i >=0 && y+i < n && x+i >=0 && x+i < n)
                     if(arr[x+i][y+i] == pl) win3++;
             }
