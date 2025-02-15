@@ -1,21 +1,60 @@
-# TicTacToe Game
+# Tic Tac Toe
 
 ## Summary
-This Java program implements a console-based Tic-Tac-Toe game. Players take turns placing their symbols ('x' or 'o') on an n x n grid, aiming to achieve a row, column, or diagonal filled with their symbol. The program checks for a winner or a tie after each move.
+The Tic Tac Toe application is a Java-based graphical game that allows two players to play Tic Tac Toe on a customizable board. The game supports boards of any size (n x n) where n is at least 3. It features an interactive user interface built with Java Swing, complete with real-time status updates and options to start a new game after a win or tie.
 
-## How to Play
-1. Run the program.
-2. Enter the size of the board (n) when prompted.
-3. Players take turns entering coordinates (x, y) to place their symbol on the board.
-4. The program displays the updated board after each move.
-5. The game continues until a player wins, or the board is full, resulting in a tie.
+## Features
+- **Customizable Board Size:** Players can choose the board size (n x n) with n ≥ 3.
+- **Interactive GUI:** A clean and responsive interface using Java Swing.
+- **Dynamic Gameplay:** Players take turns clicking on the grid cells to place their marks.
+- **Real-Time Status Updates:** A status label displays whose turn it is, or announces the winner/tie.
+- **Win/Tie Detection:** The game checks for winning conditions (rows, columns, and diagonals) after every move.
+- **New Game Option:** After a game concludes, players can choose to restart with the same or a new board size.
+- **Error Handling:** Prevents invalid moves by notifying users when a cell is already occupied.
 
-## Code Overview
-- User Input: Utilizes the Scanner class to receive user input for board size and move coordinates.
-- Board Initialization: Creates an n x n 2D array representing the game board and initializes it with '.' characters.
-- Player Turns: Alternates between 'x' and 'o' for each player's turn.
-- Move Validation: Checks if the chosen position is empty before allowing a move. If the position is not empty, the player is prompted to try again.
-- Win Conditions: Checks for win conditions after each move, including rows, columns, and diagonals.
-- Display: Prints the current state of the board after each move.
+## How to Use
 
-Feel free to explore the code, modify it, and enjoy playing Tic-Tac-Toe in the console!
+### Running the Application
+1. **Compile the Code:**
+   ```bash
+   javac TicTacToe.java
+   ```
+2. **Run the Application:**
+   ```bash
+   java TicTacToe
+   ```
+
+### Game Setup and Play
+1. **Board Size Selection:**
+   - When the application starts, a dialog will prompt you to enter a board size (n, where n ≥ 3).
+   - Enter a valid integer value (e.g., 3 for a 3x3 board) and click **OK**.
+2. **Gameplay:**
+   - The game window will display a grid of buttons representing the board.
+   - A status label at the top indicates which player's turn it is.
+   - Click on an empty cell to place your mark ('x' or 'o').
+3. **Winning and Tying:**
+   - After each move, the game checks for a win or tie.
+   - If a player wins, a message is displayed and all buttons are disabled.
+   - If all cells are filled without a win, the game declares a tie.
+4. **Starting a New Game:**
+   - After a game concludes, a prompt will ask if you wish to play again.
+   - You can choose to restart with the same board size or select a new board size.
+
+## Prerequisites
+- **Java Development Kit (JDK):** Ensure that JDK 8 or later is installed.
+- **Java Swing:** This application uses Swing, which is included in the standard JDK.
+
+## Example Usage
+Upon launching the application, you will see:
+- A dialog asking for the board size.
+- A main game window displaying:
+  - A status label at the top (e.g., "Player x's turn").
+  - An n x n grid of buttons for the game board.
+- Gameplay is performed by clicking on the grid buttons. For instance:
+  - If Player x clicks on a cell, the cell is marked with 'x' and disabled.
+  - The game then switches to Player o and updates the status label.
+  - The game continues until a win or tie is detected.
+- At the end of the game, a prompt appears asking if you wish to play again.
+
+## Author
+Developed by Ahmed Abdellatif.
